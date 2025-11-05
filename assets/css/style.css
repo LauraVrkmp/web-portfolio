@@ -46,50 +46,20 @@ body {
 }
 
 .left-col {
-	flex: 1 1 55%;
+	flex: 1 1 65%;
 	min-width: 800px;
 	order: 1;
 }
 
 .right-col {
-	flex: 1 1 35%;
 	min-width: 250px;
-	align-items: right;
 	text-align: right;
 	box-sizing: border-box;
 	order: 2;
 }
 
-@media (max-width: 600px) {
-	.cols {
-		display: inline-flex;
-		min-width: 0;
-	}
-	.left-col {
-		display: inline-flex;
-		align-items: left;
-		width: auto;
-		min-width: 0;
-	}
-	.right-col {
-		text-align: right;
-		justify-content: flex-end;
-	}
-	.terminal {
-		display: inline-flex;
-		flex-wrap: nowrap;
-		width: auto;
-		min-width: 0;
-	}
-	.content {
-		width: auto;
-		min-width: 0;
-		max-width: 60%;
-		display: block;
-	}
-	.man-page {
-		font-size: 40px;
-	}
+.terminal {
+	margin-top: -15px;
 }
 
 #terminal-input {
@@ -98,10 +68,9 @@ body {
 	color: white;
 	border: none;
 	outline: none;
-	width: 40%;
 	font-family: "AnonymousPro-Regular";
 	font-size: 25px;
-	margin-top: 1rem;
+	margin-top: 15px;
 }
 
 #terminal-input::placeholder {
@@ -121,7 +90,7 @@ body {
 	white-space: pre;
 	box-sizing: border-box;
 	top: 20px;
-	max-width: 100%;
+	width: 100%;
 	overflow-x: auto;
 	text-align: right;
 	text-indent: 0;
@@ -130,10 +99,15 @@ body {
 .man-page {
 	text-align: right;
 	line-height: 30px;
+	width: 100%;
 }
 
 .man-title {
 	font-family: "AnonymousPro-Bold";
+}
+
+.content {
+	width: 90%;
 }
 
 .content p {
@@ -157,6 +131,33 @@ body {
 	border-left: 2px solid currentColor;
 	margin-left: 6px;
 	animation: blink 0.7s steps(1) infinite;
+}
+
+@media (max-width: 1000px) {
+	.cols {
+		flex-direction: column;
+		min-width: 0;
+		flex: 1 1 100%;
+	}
+	.terminal, .content {
+		width: 95%;
+	}
+	.man-page, .ascii-container {
+		text-align: right;
+		width: 155%;
+		box-sizing: border-box;
+		max-width: 155%;
+	}
+}
+
+@media (min-width: 1000px) {
+	.cols {
+		flex-direction: row;
+	}
+	.right-col {
+		flex: 1 1 30%;
+		align-items: right;
+	}
 }
 
 @keyframes blink {
