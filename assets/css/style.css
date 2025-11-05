@@ -79,7 +79,7 @@ body {
 }
 
 #terminal-input::placeholder {
-	font-style: italic;
+	font-family: "AnonymousPro-Italic";
 	opacity: 0.6;
 }
 
