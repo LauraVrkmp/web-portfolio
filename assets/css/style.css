@@ -63,13 +63,17 @@ body {
 @media (max-width: 768px) {
 	.cols {
 		flex-direction: column;
+		display: inline-block;
+		max-width: 100%;
 	}
 	.left-col, .right-col {
 		flex: 1 1 100%;
 		min-width: 0;
+		display: block;
 	}
 	.left-col {
-		display: inline-block;
+		display: inline-flex;
+		flex-wrap: nowrap;
 		align-items: left;
 		width: 100%;
 	}
@@ -78,7 +82,7 @@ body {
 		width: 100%;
 		justify-content: flex-end;
 	}
-	#terminal-input {
+	.terminal {
 		display: inline-flex;
 		flex-wrap: nowrap;
 	}
