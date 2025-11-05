@@ -86,7 +86,6 @@ body {
 .man-page, .ascii-container {
 	position: relative;
 	margin-top: -40px;
-	margin-right: 40px;
 }
 
 .ascii-container {
@@ -96,7 +95,6 @@ body {
 	white-space: pre;
 	box-sizing: border-box;
 	top: 20px;
-	right: 240px;
 }
 
 .man-page {
