@@ -69,6 +69,7 @@ body {
 		min-width: 0;
 	}
 	.left-col {
+		display: inline-block;
 		align-items: left;
 		width: 100%;
 	}
@@ -76,6 +77,10 @@ body {
 		text-align: right;
 		width: 100%;
 		justify-content: flex-end;
+	}
+	#terminal-input {
+		display: inline-flex;
+		flex-wrap: nowrap;
 	}
 	.content {
 		display: inline-block;
