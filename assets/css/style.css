@@ -60,7 +60,7 @@ body {
 	order: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 	.cols {
 		flex-direction: column;
 		display: inline-block;
@@ -75,7 +75,7 @@ body {
 		display: inline-flex;
 		flex-wrap: nowrap;
 		align-items: left;
-		width: 100%;
+		width: auto;
 	}
 	.right-col {
 		text-align: right;
@@ -87,8 +87,10 @@ body {
 		flex-wrap: nowrap;
 	}
 	.content {
+		flex: 0 1 auto;
 		display: inline-block;
 		max-width: 100%;
+		white-space: nowrap;
 	}
 }
 
